@@ -4,17 +4,21 @@ import { DataService } from './data.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'In-browser-markdown';
-  data : any [] = [];
+  data: any[] = [];
 
-  constructor(private dataService:DataService){
-    this.dataService.getJsonData().subscribe((res: any) =>{
-      // alert(JSON.stringify(res));
-      this.data = res; 
-      console.log(this.data)
-    });
+  constructor(private dataService: DataService) {
+    this.dataService.getJsonData().subscribe(
+      (res: any) => {
+        this.data = res;
+        console.log(this.data);
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
 }

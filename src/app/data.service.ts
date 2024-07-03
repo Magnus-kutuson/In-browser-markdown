@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private http:HttpClient) { }
+  private dataUrl = './assets/data.json'; // Assuming data.json is in src/assets/
 
-  getJsonData(){
-    return this.http.get("./assets/data.json");
+  constructor(private http: HttpClient) { }
+
+  getJsonData(): Observable<any[]> {
+    return this.http.get<any[]>(this.dataUrl);
   }
 }

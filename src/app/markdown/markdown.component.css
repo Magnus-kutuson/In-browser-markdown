@@ -26,6 +26,7 @@
     border: none;
     border-radius: 3px;
     margin-right: 2rem;
+    justify-content: center;
 }
 .button-save:hover{
     background-color: #F39765;
@@ -64,6 +65,6 @@ input[type="text"]{
     width: 1px;
     background-color: #5A6069;
     height: 100vh;
-    position: fixed;
+    /* position: fixed; */
 }
 
