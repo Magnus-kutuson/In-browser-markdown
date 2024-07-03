@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './markdown.component.css'
 })
 export class MarkdownComponent {
+data: any;
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'In-browser-markdown';
+  data : any [] = [];
+
+  constructor(private dataService:DataService){
+    this.dataService.getJsonData().subscribe((res: any) =>{
+      // alert(JSON.stringify(res));
+      this.data = res; 
+      console.log(this.data)
+    });
+  }
 }
