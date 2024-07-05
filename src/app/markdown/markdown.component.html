@@ -1,33 +1,48 @@
 <div class="main-header">
-    <div class="menu-icon" (click)="toggleSidebar()">
-      <img *ngIf="!isSidebarOpen" src="../../assets/icon-menu.svg" alt="icon-menu">
-      <div class="sidebar"  [class.open]="isSidebarOpen"></div>
+  <div class="menu-icon" (click)="toggleSidebar()">
+    <img *ngIf="!isSidebarOpen" src="../../assets/icon-menu.svg" alt="icon-menu">
+    <img *ngIf="isSidebarOpen" src="../../assets/icon-close.svg" alt="close">
   </div>
-  <img *ngIf="!isSidebarOpen" src="../../assets/icon-close.svg" alt="close">
-  <div class="content" (click)="closeSidebar()"></div>
+  <div class="sidebar" [class.open]="isSidebarOpen"> 
+    <div class="sidebar-margin">
+  <p>MY DOCUMENT</p>
+  <button class="sidebar-btn">+ New Document</button>
+  </div>
+  <!-- <div class="theme-container"> -->
+    <!-- <div class="themeChanger"> -->
+    <!-- <img src="../../assets/icon-dark-mode.svg" alt="#">
+    <label class="switch">
+      <input
+        type="checkbox"
+        id="themeToggle"
+        (click)="switchThemeService.switchTheme()"
+      />
+      <span class="slider round"></span>
+    </label>
+    <img src="../../assets/icon-light-mode.svg" alt="#">
+    </div> -->
+  <!-- </div> -->
+  </div>
+  <div class="content" (click)="closeSidebar()">
+  </div>
+  
     <!-- <div class="img-logo"> -->
         <img src="../../assets/logo.svg" alt="logo">
     <!-- </div> -->
 
 
-    <!-- <div class="content">
-      <div class="doc">
-        <div class="icon"> 
-          <img src="../../assets/icon-document.svg" alt="icon-document">
-        </div>
-          <div class="docFile">
-            <p class="text">Document Name</p>
-            <input type="text" class="">
-          </div>
+
+  <!-- <div class="container">
+    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="margin-right: 1.5rem; cursor: pointer;" (click)="openPopup()">
+  </div>
+  
+  <div class="popup" *ngIf="isPopupOpen">
+    <div class="popup-content">
+      <h3>Delete this document</h3>
+      <p>Are you sure you want to delete the 'welcome.md' document and its content?<br> This content cannot be reversed</p>
+      <button (click)="confirmDelete()">Confirm and delete</button>
     </div>
   </div> -->
-   
-    
-   
-
-
-    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="margin-right: 1.5rem; cursor: pointer;">
-
     <button class="button-save">
       <img src="../../assets/icon-save.svg" alt="icon-save">
       Save Changes
