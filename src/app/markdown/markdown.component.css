@@ -24,16 +24,16 @@
     height: 100vh;
     width: 250px;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
     left: -250px; /* Hide sidebar initially */
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s;
+    transition: left 0.5s ease; /* Add transition for smooth effect */
     padding-top: 60px;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .sidebar.open {
@@ -46,7 +46,7 @@
     font-size: 25px;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: color 0.3s;
   }
   
   .sidebar a:hover {
@@ -154,7 +154,7 @@ input[type="text"]{
   
   .popup-content p {
     margin-top: 2rem;
-    color: #C1C4CB;
+    color: #7C8187;
     font-size: 15px;
   }
   
@@ -258,3 +258,34 @@ input[type="text"]{
   .slider.round:before {
     border-radius: 50%;
   }
+    .input-container {
+        margin-left: -65rem;
+      }
+      
+      .input-container input {
+        /* width: 100%; */
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s;
+        outline: none;
+        background-color: transparent;
+        color: #ccc;
+      }
+      
+      .input-container input:focus {
+        border-bottom: 1px solid #fff;
+      }
+      
+      .input-container input::placeholder {
+        color: #ccc;
+      }
+.input-img{
+    margin-left: 10rem;
+}
+.input-img p{
+    font-size: 15px;
+    color: #5A6069;
+}
+ 
+  

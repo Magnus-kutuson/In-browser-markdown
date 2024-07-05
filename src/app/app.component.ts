@@ -9,6 +9,7 @@ import { DataService } from './data.service';
 export class AppComponent {
   title = 'In-browser-markdown';
   data: any[] = [];
+  
 
   constructor(private dataService: DataService) {
     this.dataService.getJsonData().subscribe(

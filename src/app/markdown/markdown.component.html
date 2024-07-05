@@ -3,14 +3,16 @@
     <img *ngIf="!isSidebarOpen" src="../../assets/icon-menu.svg" alt="icon-menu">
     <img *ngIf="isSidebarOpen" src="../../assets/icon-close.svg" alt="close">
   </div>
+
+
   <div class="sidebar" [class.open]="isSidebarOpen"> 
     <div class="sidebar-margin">
   <p>MY DOCUMENT</p>
   <button class="sidebar-btn">+ New Document</button>
   </div>
-  <div class="theme-container">
+  <!-- <div class="theme-container"> -->
     <!-- <div class="themeChanger"> --> 
-    <img src="../../assets/icon-dark-mode.svg" alt="#">
+    <!-- <img src="../../assets/icon-dark-mode.svg" alt="#">
     <label class="switch">
       <input
         type="checkbox"
@@ -20,20 +22,33 @@
       <span class="slider round"></span>
     </label>
     <img src="../../assets/icon-light-mode.svg" alt="#">
-    </div>
+    </div> -->
   <!-- </div> -->
   </div>
   <div class="content" (click)="closeSidebar()">
   </div>
+
   
-    <!-- <div class="img-logo"> -->
-        <img src="../../assets/logo.svg" alt="logo">
-    <!-- </div> -->
+    <img src="../../assets/logo.svg" alt="logo">
+
+<div class="header">
+  <div class="input-container">
+    <div class="input-img">
+      <p>Document Name</p>
+      <img src="../../assets/icon-document.svg" alt="document" style="padding-top: 0.5rem;">
+      <input type="text" [(ngModel)]="inputValue" placeholder="welcome.md">
+    </div>
+  </div>
+</div>
+      
+  
+      
+    
 
 
 
   <div class="container">
-    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="margin-right: 1.5rem; cursor: pointer;" (click)="openPopup()">
+    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="margin-right: -18rem; cursor: pointer;" (click)="openPopup()">
   </div>
   
   <div class="popup" *ngIf="isPopupOpen">
@@ -47,7 +62,7 @@
       <img src="../../assets/icon-save.svg" alt="icon-save">
       Save Changes
     </button>
-</div>
+    </div>
 
 <div class="full-content">
     <div class="markdown-header">

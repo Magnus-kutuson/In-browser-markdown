@@ -9,6 +9,7 @@ import { ThemeService } from '../theme.service';
 })
 export class MarkdownComponent {
 document: any;
+inputValue: string = '';
 isSidebarOpen: boolean = false;
 isPopupOpen: boolean = false;
 
