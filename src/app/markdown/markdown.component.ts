@@ -8,6 +8,17 @@ import { Component } from '@angular/core';
 })
 export class MarkdownComponent {
 document: any;
-// data: any;
+isSidebarOpen: boolean = false;
+
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+  closeSidebar() {
+    if (this.isSidebarOpen) {
+      this.isSidebarOpen = false;
+    }
+  }
 
 }

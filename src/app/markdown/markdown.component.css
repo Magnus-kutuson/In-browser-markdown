@@ -14,10 +14,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .menu-icon:hover{
     background-color: #E46643;
 }
+.sidebar {
+    height: 100vh;
+    /* width: 250px; */
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
 .button-save{
     width: 152px;
     height: 40px;
@@ -26,7 +54,20 @@
     border: none;
     border-radius: 3px;
     margin-right: 2rem;
-    justify-content: center;
+    justify-content: center; 
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+img[alt="close"]{
+    position: absolute;
+    left: 16rem;
+    
+}
+img[alt="close"]:hover{
+    background-color:  #E46643;
+    width: 72px;
+    height: 72px;
 }
 .button-save:hover{
     background-color: #F39765;
@@ -40,8 +81,11 @@
     color: #2B2D31;
     width: 100%;
     height: 42px;
+    cursor: pointer;
     /* padding-left: 1rem;*/
 
+}img[alt="icon-save"]{
+    padding-right: .5rem;
 }
 /* .img-logo{
     border-right: 1px solid #E4E4E4;
@@ -52,6 +96,7 @@ img[alt="logo"]{
     margin-right: 55rem;
     border-right: 1px solid #E4E4E4;
     padding-right: 1rem;
+    cursor: pointer;
 }
 input[type="text"]{
     border: none;
@@ -67,4 +112,7 @@ input[type="text"]{
     height: 100vh;
     /* position: fixed; */
 }
+
+
+
 

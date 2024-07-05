@@ -1,17 +1,32 @@
 <div class="main-header">
-    <div class="menu-icon">
-        <!-- <a  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample"> -->
-        <img src="../../assets/icon-menu.svg" alt="icon-menu">
+    <div class="menu-icon" (click)="toggleSidebar()">
+      <img *ngIf="!isSidebarOpen" src="../../assets/icon-menu.svg" alt="icon-menu">
+      <div class="sidebar"  [class.open]="isSidebarOpen"></div>
   </div>
+  <img *ngIf="!isSidebarOpen" src="../../assets/icon-close.svg" alt="close">
+  <div class="content" (click)="closeSidebar()"></div>
     <!-- <div class="img-logo"> -->
         <img src="../../assets/logo.svg" alt="logo">
     <!-- </div> -->
 
 
-    <!-- <input type="text"> -->
+    <!-- <div class="content">
+      <div class="doc">
+        <div class="icon"> 
+          <img src="../../assets/icon-document.svg" alt="icon-document">
+        </div>
+          <div class="docFile">
+            <p class="text">Document Name</p>
+            <input type="text" class="">
+          </div>
+    </div>
+  </div> -->
+   
+    
+   
 
 
-    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="margin-right: 1.5rem;">
+    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="margin-right: 1.5rem; cursor: pointer;">
 
     <button class="button-save">
       <img src="../../assets/icon-save.svg" alt="icon-save">
@@ -26,7 +41,7 @@
       
         </div>
           <div class="markdown-input">
-          <p *ngFor="let data of document">{{document.content}}</p>
+          <p *ngFor="let item of document">{{item.content}}</p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum excepturi sequi tempora temporibus! Molestias doloribus distinctio harum culpa ullam praesentium, nulla voluptates, aut veniam, ipsa delectus tempore ut voluptatibus architecto.
           </div>
         </div>
@@ -35,7 +50,7 @@
       <div class="markdown-preview">
           <div class="sub-body">
             <p>PREVIEW</p>
-            <img src="../../assets/icon-show-preview.svg" alt="icon-show-preview" style="padding-right: 2rem;">
+            <img src="../../assets/icon-show-preview.svg" alt="icon-show-preview" style="padding-right: 2rem; cursor: pointer;">
         
           </div>
            <div class="preview-body">
