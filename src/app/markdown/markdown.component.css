@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 .menu-icon{
     width: 72px;
@@ -260,6 +261,7 @@ input[type="text"]{
   }
     .input-container {
         margin-left: -65rem;
+        overflow: hidden;
       }
       
       .input-container input {

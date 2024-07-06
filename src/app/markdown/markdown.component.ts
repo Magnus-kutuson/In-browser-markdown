@@ -12,6 +12,7 @@ document: any;
 inputValue: string = '';
 isSidebarOpen: boolean = false;
 isPopupOpen: boolean = false;
+data: any;
 
 
   toggleSidebar() {
