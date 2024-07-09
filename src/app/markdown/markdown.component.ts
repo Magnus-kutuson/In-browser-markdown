@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ThemeService } from '../theme.service';
+import { DataService } from '../data.service';
+
 
 
 @Component({
@@ -8,11 +10,11 @@ import { ThemeService } from '../theme.service';
   styleUrl: './markdown.component.css'
 })
 export class MarkdownComponent {
-document: any;
-inputValue: string = '';
-isSidebarOpen: boolean = false;
-isPopupOpen: boolean = false;
-data: any;
+  document: any;
+  inputValue: string = '';
+  isSidebarOpen: boolean = false;
+  isPopupOpen: boolean = false;
+  data: any[] = [];
 
 
   toggleSidebar() {
@@ -37,8 +39,8 @@ data: any;
     console.log('Item deleted');
     this.closePopup();
   }
-  constructor( public switchThemeService:ThemeService){}
-  switchTheme(){
+  constructor(public switchThemeService: ThemeService, private dataService: DataService) { }
+  switchTheme() {
     //   if (this.darkLight) {
     //     this.darkLight = false
     //     console.log(this.darkLight)
@@ -49,7 +51,19 @@ data: any;
     //     console.log('else statement',this.darkLight)
     //   }
     console.log("this.darkLight");
-}
+  }
+  ngOnInit(){
+    this.dataService.getJsonData().subscribe(
+      (res: any) => {
+        this.data = res;
+        // console.log(this.data);
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
+   
+  }
 }
 
 

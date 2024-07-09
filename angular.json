@@ -37,11 +37,17 @@
                 "output": "assets/"
               }
             ],
-            "styles": [
-              "src/styles.css"
-              
+           "styles": [
+              "src/styles.css",
+              "node_modules/prismjs/themes/prism-okaidia.css",
+              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-csharp.min.js",
+              "node_modules/prismjs/components/prism-css.min.js",
+              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {

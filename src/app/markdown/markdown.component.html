@@ -70,9 +70,9 @@
           <p>MARKDOWN</p>
       
         </div>
-          <div class="markdown-input">
-            <p *ngFor="let item of data">{{item.content}}</p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum excepturi sequi tempora temporibus! Molestias doloribus distinctio harum culpa ullam praesentium, nulla voluptates, aut veniam, ipsa delectus tempore ut voluptatibus architecto.
+          <div class="markdown-input" *ngFor="let item of data">
+            <textarea>{{item.content}}</textarea>
+          <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum excepturi sequi tempora temporibus! Molestias doloribus distinctio harum culpa ullam praesentium, nulla voluptates, aut veniam, ipsa delectus tempore ut voluptatibus architecto. -->
           </div>
         </div>
         
