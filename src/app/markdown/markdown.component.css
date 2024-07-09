@@ -67,16 +67,7 @@
     align-items: center;
     cursor: pointer;
 }
-img[alt="close"]{
-    position: absolute;
-    left: 16rem;
-    
-}
-img[alt="close"]:hover{
-    background-color:  #E46643;
-    width: 72px;
-    height: 72px;
-}
+
 .button-save:hover{
     background-color: #F39765;
 }
@@ -189,6 +180,7 @@ input[type="text"]{
     color: #fff;
     margin-top: 2rem;
     cursor: pointer;
+    margin-left: 3rem
   }
   .sidebar-btn:hover{
     background-color: #F39765;
@@ -196,6 +188,7 @@ input[type="text"]{
   .sidebar p{
     color: #7C8187;
     margin-top: -2rem;
+    margin-left: 3rem;
   }
   .sidebar-margin{
     margin-left: 1rem;

@@ -1,7 +1,7 @@
-<div class="main-header"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '25%' : '0%' }" style="overflow: hidden;">
+<div class="main-header"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '25%' : '0%' }">
   <div class="menu-icon" (click)="toggleSidebar()">
     <img *ngIf="!isSidebarOpen" src="../../assets/icon-menu.svg" alt="icon-menu">
-    <img *ngIf="isSidebarOpen" src="../../assets/icon-close.svg"  alt="close">
+    <img *ngIf="isSidebarOpen" src="../../assets/icon-close.svg"  alt="close" style="margin-left: 8%;">
   </div>
 
 
@@ -48,7 +48,7 @@
 
 
   <div class="container">
-    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="position: absolute;right: 13rem; cursor: pointer;" (click)="openPopup()">
+    <img src="../../assets/icon-delete.svg" alt="icon-delete" style="cursor: pointer;" (click)="openPopup()">
   </div>
   
   <div class="popup" *ngIf="isPopupOpen">
