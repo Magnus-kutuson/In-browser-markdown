@@ -53,6 +53,9 @@
   .sidebar a:hover {
     color: #f1f1f1;
   }
+  .list-items{
+    margin-top: 5rem;
+  }
   
 .button-save{
     width: 152px;
@@ -103,13 +106,26 @@ input[type="text"]{
 
 .full-content{
     display: flex;
+    width: 100%;
 
+
+}
+.markdown-header{
+  width: 50%;
+}
+.markdown-preview{
+  width: 50%;
 }
 .line{
     width: 1px;
     background-color: #5A6069;
     height: 100vh;
     /* position: fixed; */
+}
+textarea{
+  width: 100%;
+  border: none;
+  height: 100vh;
 }
 
 .container {

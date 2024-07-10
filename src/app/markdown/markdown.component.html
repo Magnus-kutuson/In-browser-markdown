@@ -10,6 +10,12 @@
   <p>MY DOCUMENT</p>
   <button class="sidebar-btn">+ New Document</button>
   </div>
+  <div class="list-items" *ngFor="let item of data">
+    <div class="items">
+      <p>{{item.createdAt}}</p>
+      <h4><a href="#">{{item.name}}</a></h4>
+    </div>
+  </div>
   <!-- <div class="theme-container"> -->
     <!-- <div class="themeChanger"> --> 
     <!-- <img src="../../assets/icon-dark-mode.svg" alt="#">
@@ -70,8 +76,8 @@
           <p>MARKDOWN</p>
       
         </div>
-          <div class="markdown-input" *ngFor="let item of data">
-            <textarea>{{item.content}}</textarea>
+          <div class="markdown-input"  *ngIf="data">
+            <textarea>{{data[1].content}}</textarea>
           <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum excepturi sequi tempora temporibus! Molestias doloribus distinctio harum culpa ullam praesentium, nulla voluptates, aut veniam, ipsa delectus tempore ut voluptatibus architecto. -->
           </div>
         </div>
