@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MarkdownComponent } from './markdown/markdown.component';
 import { CommonModule } from '@angular/common';
+import { MarkdownModule} from 'ngx-markdown'
+import { SecurityContext } from '@angular/core';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,11 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule,
     HttpClientModule, 
     FormsModule,
-    CommonModule
+    CommonModule,
+    MarkdownModule.forRoot({
+      sanitize: SecurityContext.NONE
+    }),
+    MarkdownModule.forChild()
   ],
   providers: [
     provideClientHydration(),

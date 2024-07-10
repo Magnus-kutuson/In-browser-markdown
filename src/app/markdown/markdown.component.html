@@ -73,7 +73,7 @@
 <div class="full-content"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '25%' : '0%' }">
     <div class="markdown-header">
         <div class="sub-body">
-          <p>MARKDOWN</p>
+          <p style="padding-left: 1rem;">MARKDOWN</p>
       
         </div>
           <div class="markdown-input"  *ngIf="data">
@@ -85,12 +85,16 @@
       <div class="line"></div>
       <div class="markdown-preview">
           <div class="sub-body">
-            <p>PREVIEW</p>
+            <p style="padding-left: 1rem;">PREVIEW</p>
             <img src="../../assets/icon-show-preview.svg" alt="icon-show-preview" style="padding-right: 2rem; cursor: pointer;">
         
           </div>
            <div class="preview-body">
-           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam expedita magnam maxime iure repellendus minima veritatis quisquam debitis natus cupiditate, dignissimos, quasi optio vero quam repellat quo deleniti at nemo?
+          <markdown 
+          lineHighlight
+          [line]="'6, 10-16'"
+          [lineOffset]="5"></markdown>
+           <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam expedita magnam maxime iure repellendus minima veritatis quisquam debitis natus cupiditate, dignissimos, quasi optio vero quam repellat quo deleniti at nemo? -->
           </div>
         </div>
       

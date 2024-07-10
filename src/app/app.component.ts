@@ -11,8 +11,6 @@ export class AppComponent{
   data: any[] = [];
   
 
-  constructor(private dataService: DataService) {
-  }
-
+  
 
 }
