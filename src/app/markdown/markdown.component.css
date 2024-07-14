@@ -197,9 +197,9 @@ textarea{
     border: none;
     border-radius: 3px;
     color: #fff;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     cursor: pointer;
-    margin-left: 3rem
+    /* margin-left: 1rem */
   }
   .sidebar-btn:hover{
     background-color: #F39765;
@@ -220,8 +220,11 @@ textarea{
     margin-bottom: 2rem; */
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    left: 30px;
   }
+  /* .file-name{
+    margin-left: 0;
+  } */
   .switch {
     position: relative;
     display: inline-block;
@@ -286,6 +289,10 @@ textarea{
         background-color: transparent;
         color: #ccc;
       }
+      .input-container input:hover{
+        border-bottom: 1px solid #fff;
+        cursor: pointer;
+      }
       
       .input-container input:focus {
         border-bottom: 1px solid #fff;
@@ -300,6 +307,40 @@ textarea{
 .input-img p{
     font-size: 15px;
     color: #5A6069;
+    cursor: pointer;
 }
- 
-  
+img[alt="icon-show-preview"]{
+  padding-right: 2rem;
+  cursor: pointer;
+
+}
+/* img[alt="icon-show-preview"]:hover{
+  background-color: #E46643;
+} */
+  .list-items{
+    display: block;
+    align-items: center;
+  }
+  .small-text{
+    font-size: 14px;
+    padding-left: 0.5rem;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  /* styles.css */
+.light-icon {
+  /* color: #cccccc; */
+  opacity: 0.6;   /* Adjust the opacity to make it lighter */
+  padding-right: 1rem;
+}
+.light-icon:hover{
+  background-color: #E46643;
+}
+.items{
+  margin-top: -3rem;
+}
+.item-name{
+  /* font-size: 14px; */
+  padding-top: 2rem;
+
+}

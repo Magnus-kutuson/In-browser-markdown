@@ -1,24 +1,27 @@
-<div class="main-header"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '25%' : '0%' }">
+<div class="main-header"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '250px' : '0%' }">
   <div class="menu-icon" (click)="toggleSidebar()">
     <img *ngIf="!isSidebarOpen" src="../../assets/icon-menu.svg" alt="icon-menu">
     <img *ngIf="isSidebarOpen" src="../../assets/icon-close.svg"  alt="close" style="margin-left: 8%;">
   </div>
 
 
-  <div class="sidebar" [class.open]="isSidebarOpen" [ngStyle]="{ 'display': isSidebarOpen ? 'block' : 'none', 'width': isSidebarOpen ? '25%' : '0%' }"> 
+  <div class="sidebar" [class.open]="isSidebarOpen" [ngStyle]="{ 'display': isSidebarOpen ? 'block' : 'none', 'width': isSidebarOpen ? '250px' : '0%' }"> 
     <div class="sidebar-margin">
-  <p>MY DOCUMENT</p>
+  <p style="margin-left: 0;">MY DOCUMENT</p>
   <button class="sidebar-btn">+ New Document</button>
   </div>
   <div class="list-items" *ngFor="let item of data">
     <div class="items">
-      <p>{{item.createdAt}}</p>
-      <h4><a href="#">{{item.name}}</a></h4>
+      <img src="../../assets/icon-document.svg" alt="" style="padding-left:1.5rem ;">
+      <p class="small-text">
+        {{item.createdAt}}
+      </p>
+      <p class="item-name"><a href="#" style="font-size: 14px; padding-left: 0.5rem;">{{item.name}}</a></p>
     </div>
   </div>
-  <!-- <div class="theme-container"> -->
+  <div class="theme-container">
     <!-- <div class="themeChanger"> --> 
-    <!-- <img src="../../assets/icon-dark-mode.svg" alt="#">
+    <img src="../../assets/icon-dark-mode.svg" alt="#">
     <label class="switch">
       <input
         type="checkbox"
@@ -28,7 +31,7 @@
       <span class="slider round"></span>
     </label>
     <img src="../../assets/icon-light-mode.svg" alt="#">
-    </div> -->
+    </div>
   <!-- </div> -->
   </div>
   <div class="content" (click)="closeSidebar()">
@@ -70,7 +73,7 @@
     </button>
     </div>
 
-<div class="full-content"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '25%' : '0%' }">
+<div class="full-content"  [ngStyle]="{ 'margin-left': isSidebarOpen ? '250px' : '0%' }">
     <div class="markdown-header">
         <div class="sub-body">
           <p style="padding-left: 1rem;">MARKDOWN</p>
@@ -86,7 +89,8 @@
       <div class="markdown-preview">
           <div class="sub-body">
             <p style="padding-left: 1rem;">PREVIEW</p>
-            <img src="../../assets/icon-show-preview.svg" alt="icon-show-preview" style="padding-right: 2rem; cursor: pointer;">
+            <i class="fas fa-eye light-icon"></i>
+            <!-- <img src="../../assets/icon-show-preview.svg" alt="icon-show-preview"> -->
         
           </div>
            <div class="preview-body">
